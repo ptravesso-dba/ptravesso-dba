@@ -126,15 +126,43 @@ sub rings_svg {
   join "\n    ", @o;
 }
 
-# ---------------- relic cards ----------------
+# ---------------- relic cards: one per public repository ----------------
+# TO ADD A PROJECT: copy one block below, fill it in, run `perl build.pl`.
+# The card SVG (assets/relic-<repo>.svg) and the README cards block are both
+# regenerated; nothing else needs editing. See build/COMO-ATUALIZAR.md.
+#   repo : repository name under github.com/ptravesso-dba (exact spelling)
+#   name : item name, souls style ("Scroll of…", "Eye of…", "…Rite"), up to ~26 chars
+#   kind : language · theme (or "★ N" stars), shown small under the name
+#   lore : up to 4 lines of about 40 characters each: what it does, then a closing flourish
+#   alt  : one plain sentence for screen readers (what the repo does)
 my @relics = (
-  { file => 'relic-install-automation19', repo => 'install-automation19', name => 'Scroll of the Grid Rite', kind => 'Bash · Oracle 19c',
-    lore => ['Automates Grid Infrastructure 19c, ASM/AFD', 'and Database 19c installs, primary or', 'standby, ready for Data Guard. A day of', 'manual ritual, reduced to one script.'] },
-  { file => 'relic-oratop-monitor', repo => 'oratop-monitor', name => 'Eye of oratop', kind => 'Bash · ★ 3',
-    lore => ['Captures Oracle performance metrics', 'with oratop on a schedule, with log', 'retention and compression. For seeing', 'what happened at 3 a.m., long after.'] },
-  { file => 'relic-preventiva', repo => 'preventiva', name => 'Preventive Rite', kind => 'Bash · maintenance',
-    lore => ['RMAN restore validate, Data Pump dump', 'checks and Statspack/AWR reports,', 'e-mailed on schedule. Wards off what', 'has not broken yet.'] },
+  { repo => 'install-automation19', name => 'Scroll of the Grid Rite', kind => 'Bash · Oracle 19c',
+    lore => ['Automates Grid Infrastructure 19c, ASM/AFD', 'and Database 19c installs, primary or', 'standby, ready for Data Guard. A day of', 'manual ritual, reduced to one script.'],
+    alt  => 'automates Oracle Grid Infrastructure 19c, ASM and Database 19c installs, primary or standby.' },
+  { repo => 'oratop-monitor', name => 'Eye of oratop', kind => 'Bash · ★ 3',
+    lore => ['Captures Oracle performance metrics', 'with oratop on a schedule, with log', 'retention and compression. For seeing', 'what happened at 3 a.m., long after.'],
+    alt  => 'captures Oracle performance metrics with oratop on a schedule.' },
+  { repo => 'preventiva', name => 'Preventive Rite', kind => 'Bash · maintenance',
+    lore => ['RMAN restore validate, Data Pump dump', 'checks and Statspack/AWR reports,', 'e-mailed on schedule. Wards off what', 'has not broken yet.'],
+    alt  => 'RMAN restore validate, Data Pump checks and Statspack/AWR reports by e-mail.' },
 );
+$_->{file} = "relic-$_->{repo}" for @relics;
+for my $r (@relics) {   # catch text that would overflow the 400x230 card
+  warn "WARN $r->{repo}: more than 4 lore lines\n" if @{ $r->{lore} } > 4;
+  length($_) > 43 and warn "WARN $r->{repo}: lore line over 43 chars: $_\n" for @{ $r->{lore} };
+  warn "WARN $r->{repo}: name over 26 chars\n" if length $r->{name} > 26;
+}
+
+# README block between <!--RELICS:START--> and <!--RELICS:END-->, three cards per row
+sub readme_relics {
+  my @o = map { sprintf '  <a href="https://github.com/ptravesso-dba/%s"><img src="assets/%s.svg" width="32%%" alt="%s: %s"></a>', $_->{repo}, $_->{file}, $_->{repo}, esc($_->{alt}) } @relics;
+  join "\n", '<p align="center">', @o, '</p>';
+}
+sub update_readme {
+  my $p = '../README.md'; open my $f, '<:utf8', $p or die "$p: $!"; local $/; my $s = <$f>; close $f;
+  $s =~ s/(<!--RELICS:START-->\n).*?(\n<!--RELICS:END-->)/$1 . readme_relics() . $2/se or die "README: RELICS markers not found\n";
+  open $f, '>:utf8', $p or die $!; print $f $s; close $f; print "README.md relics block           ", scalar @relics, " cards\n";
+}
 
 sub relic_svg {
   my $r = shift;
@@ -217,3 +245,4 @@ write_out("$_->{file}.svg", relic_svg($_)) for @relics;
 write_out('btn-bonfire.svg', button_svg('VISIT THE BONFIRE', 'ptravesso-dba.github.io', 300));
 write_out('btn-linkedin.svg', button_svg('LINKEDIN', 'in/pablo-travesso', 220));
 write_out('footer.svg', footer_svg());
+update_readme();

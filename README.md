@@ -16,11 +16,13 @@
 SQL> SELECT relic, purpose FROM pablo.repositories WHERE visibility = 'PUBLIC';
 ```
 
+<!--RELICS:START-->
 <p align="center">
   <a href="https://github.com/ptravesso-dba/install-automation19"><img src="assets/relic-install-automation19.svg" width="32%" alt="install-automation19: automates Oracle Grid Infrastructure 19c, ASM and Database 19c installs, primary or standby."></a>
   <a href="https://github.com/ptravesso-dba/oratop-monitor"><img src="assets/relic-oratop-monitor.svg" width="32%" alt="oratop-monitor: captures Oracle performance metrics with oratop on a schedule."></a>
   <a href="https://github.com/ptravesso-dba/preventiva"><img src="assets/relic-preventiva.svg" width="32%" alt="preventiva: RMAN restore validate, Data Pump checks and Statspack/AWR reports by e-mail."></a>
 </p>
+<!--RELICS:END-->
 
 <p align="center">
   <img src="assets/footer.svg" width="100%" alt="SQL> exit. Disconnected from Oracle AI Database 26ai. The bonfire stays lit.">
@@ -28,4 +30,4 @@ SQL> SELECT relic, purpose FROM pablo.repositories WHERE visibility = 'PUBLIC';
 
 <p align="center"><sub>Not into games? The look of this profile, and of the whole ecosystem around it, is inspired by the Souls-like series, Dark Souls in particular: bonfires, rings, relics, a status sheet. A deliberate visual identity, not a joke.</sub></p>
 
-<!-- Source of the images: build/ (perl build/build.pl regenerates assets/). -->
+<!-- Generated: edit build/build.pl and run `perl build.pl` (see build/COMO-ATUALIZAR.md). The RELICS block below the SQL line is rewritten by the build. -->
