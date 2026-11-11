@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="t d">
 <title id="t">Status: Pablo Travesso</title>
 <desc id="d">Character sheet in the style of a souls-like status screen: class Oracle DBA, attributes, equipment and certifications.</desc>
 <style>
@@ -27,13 +27,13 @@
   <g id="diamond"><path d="M0-5 5 0 0 5-5 0z" fill="#e8833a"/></g>
 </defs>
 
-<rect width="1200" height="600" rx="14" fill="url(#bg)"/>
-<rect width="1200" height="600" rx="14" fill="url(#pit)"/>
+<rect width="1200" height="790" rx="14" fill="url(#bg)"/>
+<rect width="1200" height="790" rx="14" fill="url(#pit)"/>
 <!-- ornate double frame -->
-<rect x=".5" y=".5" width="1199" height="599" rx="14" fill="none" stroke="#eadcc5" stroke-opacity=".14"/>
-<rect x="14.5" y="14.5" width="1171" height="571" rx="6" fill="none" stroke="#eadcc5" stroke-opacity=".08"/>
+<rect x=".5" y=".5" width="1199" height="789" rx="14" fill="none" stroke="#eadcc5" stroke-opacity=".14"/>
+<rect x="14.5" y="14.5" width="1171" height="761" rx="6" fill="none" stroke="#eadcc5" stroke-opacity=".08"/>
 <use href="#diamond" x="15" y="15" class="glint"/><use href="#diamond" x="1185" y="15" class="glint"/>
-<use href="#diamond" x="15" y="585" class="glint"/><use href="#diamond" x="1185" y="585" class="glint"/>
+<use href="#diamond" x="15" y="775" class="glint"/><use href="#diamond" x="1185" y="775" class="glint"/>
 
 <!-- title -->
 <text x="600" y="62" text-anchor="middle" class="disp" font-weight="700" font-size="26" letter-spacing="10" fill="#eadcc5">STATUS</text>
@@ -52,15 +52,6 @@
     <text class="k" y="206">Since</text>    <text class="v" x="300" y="206" text-anchor="end">2022 · on call</text>
     <text class="k" y="238">Gift</text>     <text class="v" x="300" y="238" text-anchor="end">ADS degree · UNIP</text>
   </g>
-  <text class="h" y="300">RINGS</text>
-  <rect y="312" width="300" height="1" fill="#eadcc5" opacity=".12"/>
-  <g class="mono">
-    <use href="#diamond" x="5" y="339" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="344">OCP · Oracle Database Admin</text>
-    <use href="#diamond" x="5" y="369" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="374">OCP · MySQL 8.0 DBA</text>
-    <use href="#diamond" x="5" y="399" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="404">OCI Architect Associate</text>
-    <use href="#diamond" x="5" y="429" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="434">LPIC-1 · Linux</text>
-    <use href="#diamond" x="5" y="459" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="464">+ more Oracle certifications</text>
-  </g>
 </g>
 
 <!-- column 2: attributes -->
@@ -72,12 +63,12 @@
     <rect x="0" y="55" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="55" width="224" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.07s"/>
     <text class="k" y="90">Backup &amp; Recovery</text><text class="n" x="340" y="90" text-anchor="end">40</text>
     <rect x="0" y="99" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="99" width="200" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.22s"/>
-    <text class="k" y="134">Data Guard · RAC · ASM</text><text class="n" x="340" y="134" text-anchor="end">38</text>
-    <rect x="0" y="143" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="143" width="190" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.38s"/>
-    <text class="k" y="178">Linux &amp; Shell</text><text class="n" x="340" y="178" text-anchor="end">35</text>
-    <rect x="0" y="187" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="187" width="176" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.53s"/>
-    <text class="k" y="222">Performance Tuning</text><text class="n" x="340" y="222" text-anchor="end">32</text>
-    <rect x="0" y="231" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="231" width="160" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.67s"/>
+    <text class="k" y="134">Linux &amp; Shell</text><text class="n" x="340" y="134" text-anchor="end">40</text>
+    <rect x="0" y="143" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="143" width="200" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.38s"/>
+    <text class="k" y="178">Performance Tuning</text><text class="n" x="340" y="178" text-anchor="end">40</text>
+    <rect x="0" y="187" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="187" width="200" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.53s"/>
+    <text class="k" y="222">Data Guard · RAC · ASM</text><text class="n" x="340" y="222" text-anchor="end">38</text>
+    <rect x="0" y="231" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="231" width="190" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.67s"/>
     <text class="k" y="266">OCI</text><text class="n" x="340" y="266" text-anchor="end">26</text>
     <rect x="0" y="275" width="300" height="4" rx="2" fill="#eadcc5" opacity=".08"/><rect class="bar" x="0" y="275" width="130" height="4" rx="2" fill="url(#barG)" style="animation-delay:0.82s"/>
     <text class="k" y="310">MySQL</text><text class="n" x="340" y="310" text-anchor="end">20</text>
@@ -102,6 +93,27 @@
   </g>
 </g>
 
-<rect x="300" y="532" width="600" height="1" fill="url(#rule)"/>
-<text x="600" y="562" text-anchor="middle" class="disp" font-weight="500" font-style="italic" font-size="16" letter-spacing="1" fill="#9b8d78">“Keeping production up while you sleep.”</text>
+<!-- band: rings (certifications) -->
+<g transform="translate(0 530)">
+  <text class="h" x="60" y="0">RINGS</text>
+  <text class="small mono" x="1140" y="0" text-anchor="end">Oracle Certified · LPI</text>
+  <rect x="60" y="12" width="1080" height="1" fill="#eadcc5" opacity=".12"/>
+  <g class="mono">
+    <use href="#diamond" x="65" y="43" opacity=".8"/><text class="v" x="80" y="48">Oracle DB Administration</text><text class="small" x="360" y="48" text-anchor="end">PRO</text>
+    <use href="#diamond" x="65" y="77" opacity=".8"/><text class="v" x="80" y="82">MySQL 8.0 Database Admin</text><text class="small" x="360" y="82" text-anchor="end">PRO</text>
+    <use href="#diamond" x="65" y="111" opacity=".8"/><text class="v" x="80" y="116">Cloud Database Service</text><text class="small" x="360" y="116" text-anchor="end">PRO</text>
+    <use href="#diamond" x="65" y="145" opacity=".8"/><text class="v" x="80" y="150">Cloud Database Migration</text><text class="small" x="360" y="150" text-anchor="end">PRO</text>
+    <use href="#diamond" x="455" y="43" opacity=".8"/><text class="v" x="470" y="48">Autonomous Database Cloud</text><text class="small" x="750" y="48" text-anchor="end">PRO</text>
+    <use href="#diamond" x="455" y="77" opacity=".8"/><text class="v" x="470" y="82">AI Vector Search</text><text class="small" x="750" y="82" text-anchor="end">PRO</text>
+    <use href="#diamond" x="455" y="111" opacity=".8"/><text class="v" x="470" y="116">Oracle Database SQL</text><text class="small" x="750" y="116" text-anchor="end">ASSOC</text>
+    <use href="#diamond" x="455" y="145" opacity=".8"/><text class="v" x="470" y="150">MySQL Implementation</text><text class="small" x="750" y="150" text-anchor="end">ASSOC</text>
+    <use href="#diamond" x="845" y="43" opacity=".8"/><text class="v" x="860" y="48">OCI Architect</text><text class="small" x="1140" y="48" text-anchor="end">ASSOC</text>
+    <use href="#diamond" x="845" y="77" opacity=".8"/><text class="v" x="860" y="82">OCI Foundations</text><text class="small" x="1140" y="82" text-anchor="end">ASSOC</text>
+    <use href="#diamond" x="845" y="111" opacity=".8"/><text class="v" x="860" y="116">LPIC-1 · Linux</text><text class="small" x="1140" y="116" text-anchor="end">LPI</text>
+    <use href="#diamond" x="845" y="145" opacity=".8"/><text class="v" x="860" y="150">Oracle Specialist badges</text><text class="small" x="1140" y="150" text-anchor="end">3</text>
+  </g>
+</g>
+
+<rect x="300" y="720" width="600" height="1" fill="url(#rule)"/>
+<text x="600" y="752" text-anchor="middle" class="disp" font-weight="500" font-style="italic" font-size="16" letter-spacing="1" fill="#9b8d78">“Keeping production up while you sleep.”</text>
 </svg>

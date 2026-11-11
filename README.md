@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/status.svg" width="100%" alt="Status. Class: Oracle DBA. Level 19c. Covenant: TOTVS. Origin: Ribeirão Preto, Brazil. Strongest attributes: Oracle Database, backup and recovery, Data Guard, RAC and ASM, Linux and shell, performance tuning. Also OCI, MySQL and PostgreSQL. Certifications: OCP Oracle Database Administrator, OCP MySQL 8.0, OCI Architect Associate, LPIC-1.">
+  <img src="assets/status.svg" width="100%" alt="Status. Class: Oracle DBA. Level 19c. Covenant: TOTVS. Origin: Ribeirão Preto, Brazil. Strongest attributes: Oracle Database, backup and recovery, Linux and shell, performance tuning, Data Guard, RAC and ASM. Also OCI, MySQL and PostgreSQL. Certifications: Oracle Certified Professional in Database Administration, MySQL 8.0 Database Administrator, Cloud Database Service, Cloud Database Migration, Autonomous Database Cloud and AI Vector Search; Oracle Certified Associate in Database SQL, MySQL Implementation, OCI Architect and OCI Foundations; LPIC-1; three Oracle Specialist badges.">
 </p>
 
 ```sql

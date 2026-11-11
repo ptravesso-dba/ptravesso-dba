@@ -65,9 +65,9 @@ sub esc { my $s = shift; $s =~ s/&/&amp;/g; $s =~ s/</&lt;/g; $s =~ s/>/&gt;/g; 
 my @attrs = (   # name, value (souls-style; the bar is drawn against a soft cap of 60)
   ['Oracle Database',      45],
   ['Backup & Recovery',    40],
+  ['Linux & Shell',        40],
+  ['Performance Tuning',   40],
   ['Data Guard · RAC · ASM', 38],
-  ['Linux & Shell',        35],
-  ['Performance Tuning',   32],
   ['OCI',                  26],
   ['MySQL',                20],
   ['PostgreSQL',           15],
@@ -81,12 +81,19 @@ my @equip = (
   ['Tools',    'Bash · Linux · oratop'],
   ['Realm',    'OCI · on-premises'],
 );
-my @rings = (
-  'OCP · Oracle Database Admin',
-  'OCP · MySQL 8.0 DBA',
-  'OCI Architect Associate',
-  'LPIC-1 · Linux',
-  '+ more Oracle certifications',
+my @rings = (   # name, tier tag; laid out column by column, 4 per column
+  ['Oracle DB Administration', 'PRO'],
+  ['MySQL 8.0 Database Admin', 'PRO'],
+  ['Cloud Database Service',   'PRO'],
+  ['Cloud Database Migration', 'PRO'],
+  ['Autonomous Database Cloud', 'PRO'],
+  ['AI Vector Search',         'PRO'],
+  ['Oracle Database SQL',      'ASSOC'],
+  ['MySQL Implementation',     'ASSOC'],
+  ['OCI Architect',            'ASSOC'],
+  ['OCI Foundations',          'ASSOC'],
+  ['LPIC-1 · Linux',           'LPI'],
+  ['Oracle Specialist badges', '3'],
 );
 
 sub attrs_svg {
@@ -109,10 +116,12 @@ sub equip_svg {
   join "\n    ", @o;
 }
 sub rings_svg {
-  my @o; my $y = 344;
-  for my $r (@rings) {
-    push @o, sprintf '<use href="#diamond" x="5" y="%d" transform="translate(0 0)" opacity=".8"/><text class="v" x="20" y="%d">%s</text>', $y - 5, $y, esc($r);
-    $y += 30;
+  my @o; my @cx = (60, 450, 840);
+  for my $i (0 .. $#rings) {
+    my ($n, $tag) = @{ $rings[$i] };
+    my $x = $cx[int($i / 4)]; my $y = 48 + 34 * ($i % 4);
+    push @o, sprintf '<use href="#diamond" x="%d" y="%d" opacity=".8"/><text class="v" x="%d" y="%d">%s</text><text class="small" x="%d" y="%d" text-anchor="end">%s</text>',
+      $x + 5, $y - 5, $x + 20, $y, esc($n), $x + 300, $y, esc($tag);
   }
   join "\n    ", @o;
 }
