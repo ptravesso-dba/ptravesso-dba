@@ -8,5 +8,5 @@
 <rect width="1200" height="70" rx="12" fill="#0c0a09"/>
 <rect x=".5" y=".5" width="1199" height="69" rx="12" fill="none" stroke="#eadcc5" stroke-opacity=".12"/>
 <text x="28" y="30" class="mono" fill="#9b8d78">SQL&gt; <tspan fill="#e8833a">exit</tspan></text>
-<text x="28" y="52" class="mono" fill="#9b8d78">Disconnected from Oracle Database 19c Enterprise Edition. The bonfire stays lit.<tspan class="c" fill="#e8833a"> █</tspan></text>
+<text x="28" y="52" class="mono" fill="#9b8d78">Disconnected from Oracle AI Database 26ai Enterprise Edition. The bonfire stays lit.<tspan class="c" fill="#e8833a"> █</tspan></text>
 </svg>

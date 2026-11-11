@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/status.svg" width="100%" alt="Status. Class: Oracle DBA. Level 19c. Covenant: TOTVS. Origin: Ribeirão Preto, Brazil. Strongest attributes: Oracle Database, backup and recovery, Linux and shell, performance tuning, Data Guard, RAC and ASM. Also OCI, MySQL and PostgreSQL. Certifications: Oracle Certified Professional in Database Administration, MySQL 8.0 Database Administrator, Cloud Database Service, Cloud Database Migration, Autonomous Database Cloud and AI Vector Search; Oracle Certified Associate in Database SQL, MySQL Implementation, OCI Architect and OCI Foundations; LPIC-1; three Oracle Specialist badges.">
+  <img src="assets/status.svg" width="100%" alt="Status. Class: Oracle DBA. Level 26ai. Covenant: TOTVS. Origin: Ribeirão Preto, Brazil. Strongest attributes: Oracle Database, backup and recovery, Linux and shell, performance tuning, Data Guard, RAC and ASM. Also OCI, MySQL and PostgreSQL. Certifications: Oracle Certified Professional in Database Administration, MySQL 8.0 Database Administrator, Cloud Database Service, Cloud Database Migration, Autonomous Database Cloud and AI Vector Search; Oracle Certified Associate in Database SQL, MySQL Implementation, OCI Architect and OCI Foundations; LPIC-1; three Oracle Specialist badges.">
 </p>
 
 ```sql
@@ -23,7 +23,9 @@ SQL> SELECT relic, purpose FROM pablo.repositories WHERE visibility = 'PUBLIC';
 </p>
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="SQL> exit. Disconnected from Oracle Database 19c. The bonfire stays lit.">
+  <img src="assets/footer.svg" width="100%" alt="SQL> exit. Disconnected from Oracle AI Database 26ai. The bonfire stays lit.">
 </p>
+
+<p align="center"><sub>Not into games? The look of this profile, and of the whole ecosystem around it, is inspired by the Souls-like series, Dark Souls in particular: bonfires, rings, relics, a status sheet. A deliberate visual identity, not a joke.</sub></p>
 
 <!-- Source of the images: build/ (perl build/build.pl regenerates assets/). -->
