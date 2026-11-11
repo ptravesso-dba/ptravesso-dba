@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+<title id="t">Pablo Travesso: Oracle DBA</title>
+<desc id="d">A bonfire over a database emblem, embers rising on a dark background. Oracle DBA, PostgreSQL, MySQL.</desc>
+<style>
+<!--FONTS:cinzel700,jbm400,jbm700-->
+.disp { font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif; font-weight: 700; }
+.mono { font-family: "JetBrains Mono", Consolas, "Liberation Mono", monospace; }
+.r { animation: rise linear infinite; }
+.s { animation: sway ease-in-out infinite alternate; }
+@keyframes rise { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 75% { opacity: .85; } 100% { transform: translateY(-360px); opacity: 0; } }
+@keyframes sway { from { transform: translateX(-10px); } to { transform: translateX(10px); } }
+.ring { transform-box: view-box; transform-origin: 170px 170px; animation: turn 80s linear infinite; }
+@keyframes turn { to { transform: rotate(360deg); } }
+.fl { transform-box: fill-box; transform-origin: 50% 100%; animation: flick 1.8s ease-in-out infinite alternate; }
+@keyframes flick { 0% { transform: scale(1, 1); } 35% { transform: scale(.96, 1.05); } 70% { transform: scale(1.03, .97); } 100% { transform: scale(.98, 1.03); } }
+.halo { animation: breathe 4s ease-in-out infinite alternate; }
+@keyframes breathe { from { opacity: .55; } to { opacity: 1; } }
+.l1, .l2, .l3 { opacity: 0; animation: cyc 12s infinite backwards; }
+.l2 { animation-delay: 4s; } .l3 { animation-delay: 8s; }
+@keyframes cyc { 0% { opacity: 0; } 3% { opacity: 1; } 30% { opacity: 1; } 33.3% { opacity: 0; } 100% { opacity: 0; } }
+.caret { animation: blink 1.05s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .r, .s, .ring, .fl, .halo, .caret { animation: none; }
+  .l1 { animation: none; opacity: 1; } .l2, .l3 { display: none; }
+}
+</style>
+<defs>
+  <radialGradient id="pit" cx="50%" cy="120%" r="80%">
+    <stop offset="0" stop-color="#8c3b15" stop-opacity=".55"/>
+    <stop offset=".45" stop-color="#8c3b15" stop-opacity=".12"/>
+    <stop offset="1" stop-color="#8c3b15" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+    <stop offset=".6" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+  </radialGradient>
+  <radialGradient id="eg"><stop offset="0" stop-color="#ffd9a0"/><stop offset=".35" stop-color="#e8833a"/><stop offset="1" stop-color="#e8833a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="face" cx="50%" cy="62%" r="60%"><stop offset="0" stop-color="#2a1a10"/><stop offset="1" stop-color="#0f0c0a"/></radialGradient>
+  <radialGradient id="haloG"><stop offset=".55" stop-color="#e8833a" stop-opacity=".35"/><stop offset="1" stop-color="#e8833a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8c3b15"/><stop offset=".6" stop-color="#e8833a"/><stop offset="1" stop-color="#f6c48a"/></linearGradient>
+  <path id="ringPath" d="M170,170 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/>
+  <clipPath id="frame"><rect width="1200" height="340" rx="14"/></clipPath>
+</defs>
+
+<g clip-path="url(#frame)">
+  <rect width="1200" height="340" fill="#0c0a09"/>
+  <rect width="1200" height="340" fill="url(#pit)"/>
+  <!--LINKS:1200,340,23-->
+  <!--EMBERS:46,1200,340,7-->
+  <rect width="1200" height="340" fill="url(#vig)"/>
+</g>
+<rect x=".5" y=".5" width="1199" height="339" rx="14" fill="none" stroke="#eadcc5" stroke-opacity=".14"/>
+
+<!-- emblem -->
+<circle class="halo" cx="170" cy="170" r="128" fill="url(#haloG)"/>
+<g class="ring">
+  <circle cx="170" cy="170" r="132" fill="none" stroke="#eadcc5" stroke-opacity=".12"/>
+  <circle cx="170" cy="170" r="104" fill="none" stroke="#eadcc5" stroke-opacity=".12" stroke-dasharray="1 6"/>
+  <text class="mono" font-size="11" letter-spacing="3" fill="#9b8d78"><textPath href="#ringPath" xlink:href="#ringPath" textLength="738" lengthAdjust="spacing">ORACLE · POSTGRESQL · MYSQL · DATA GUARD · RAC · RMAN · TUNING · </textPath></text>
+</g>
+<circle cx="170" cy="170" r="96" fill="url(#face)" stroke="#eadcc5" stroke-opacity=".16"/>
+<g transform="translate(110 108) scale(1.9)">
+  <path class="fl" d="M32 6c3 7 9 10 9 18 0 4-2 7-4 8 1-4-1-7-3-8 0 5-4 6-4 11 0 2 1 3 2 4-4-1-7-4-7-9 0-9 7-12 7-24z" fill="url(#flame)"/>
+  <g fill="none" stroke="#eadcc5" stroke-width="1.6" stroke-linecap="round">
+    <ellipse cx="32" cy="40" rx="15" ry="4.5"/>
+    <path d="M17 40v8c0 2.5 6.7 4.5 15 4.5s15-2 15-4.5v-8"/>
+    <path d="M17 48v6c0 2.5 6.7 4.5 15 4.5s15-2 15-4.5v-6" opacity=".55"/>
+  </g>
+</g>
+
+<!-- identity -->
+<text x="352" y="112" class="mono" font-size="15" letter-spacing="3.5" fill="#9b8d78"><tspan fill="#e8833a">●</tspan> INSTANCE PTRAVESSO · OPEN</text>
+<text x="348" y="182" class="disp" font-size="66" fill="#eadcc5" letter-spacing="1">PABLO TRAVESSO</text>
+<g class="mono" font-size="22" fill="#eadcc5">
+  <text class="l1" x="352" y="228">Oracle DBA <tspan fill="#e8833a">·</tspan> PostgreSQL <tspan fill="#e8833a">·</tspan> MySQL</text>
+  <text class="l2" x="352" y="228">Performance &amp; SQL tuning <tspan fill="#e8833a">·</tspan> AWR <tspan fill="#e8833a">·</tspan> ASH</text>
+  <text class="l3" x="352" y="228">Data Guard <tspan fill="#e8833a">·</tspan> RAC <tspan fill="#e8833a">·</tspan> ASM <tspan fill="#e8833a">·</tspan> RMAN</text>
+</g>
+<rect class="caret" x="352" y="244" width="11" height="3" fill="#e8833a"/>
+<text x="352" y="284" class="mono" font-size="14" fill="#9b8d78">Ribeirão Preto, Brazil · UTC−3</text>
+<text x="1172" y="318" text-anchor="end" class="mono" font-size="13" fill="#9b8d78" opacity=".8">SQL&gt; SELECT * FROM pablo.profile;</text>
+</svg>
