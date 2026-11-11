@@ -77,9 +77,9 @@ my @attrs = (   # name, value (souls-style; the bar is drawn against a soft cap 
   ['Linux & Shell',        40],
   ['Performance Tuning',   40],
   ['Data Guard · RAC · ASM', 38],
+  ['MySQL',                35],
+  ['PostgreSQL',           30],
   ['OCI',                  26],
-  ['MySQL',                20],
-  ['PostgreSQL',           15],
 );
 my @equip = (
   ['Weapon',   'RMAN · Data Pump'],
