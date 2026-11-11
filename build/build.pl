@@ -44,6 +44,15 @@ sub embers {
   join "\n  ", @g;
 }
 
+sub static_embers {   # frozen embers for still images (avatar)
+  my ($n, $w, $h, $s) = @_; $seed = $s; my @g;
+  for (1 .. $n) {
+    my $x = r2(rnd() * $w); my $y = r2($h * (1 - rnd() ** 1.6)); my $rad = 0.6 + rnd() * 1.4; my $o = r2(.35 + .6 * $y / $h);
+    push @g, sprintf q{<circle cx="%s" cy="%s" r="%s" fill="url(#eg)" opacity="%s"/><circle cx="%s" cy="%s" r="%s" fill="#ffcf96" opacity="%s"/>}, $x, $y, r2($rad * 4), r2($o * .5), $x, $y, r2($rad * .7), $o;
+  }
+  join "\n", @g;
+}
+
 sub links {   # faint static schema-graph in the background
   my ($w, $h, $s) = @_; $seed = $s;
   my @p = map { [rnd() * $w, rnd() * $h] } 1 .. 34;
@@ -232,6 +241,7 @@ sub template {
   my $file = shift; open my $f, '<:utf8', $file or die "$file: $!"; local $/; my $s = <$f>;
   $s =~ s/<!--FONTS:([\w,]+)-->/fonts($1)/ge;
   $s =~ s/<!--EMBERS:(\d+),(\d+),(\d+),(\d+)-->/embers($1,$2,$3,$4)/ge;
+  $s =~ s/<!--STATIC_EMBERS:(\d+),(\d+),(\d+),(\d+)-->/static_embers($1,$2,$3,$4)/ge;
   $s =~ s/<!--LINKS:(\d+),(\d+),(\d+)-->/links($1,$2,$3)/ge;
   $s =~ s/<!--ATTRS-->/attrs_svg()/e;
   $s =~ s/<!--EQUIP-->/equip_svg()/e;
@@ -245,4 +255,5 @@ write_out("$_->{file}.svg", relic_svg($_)) for @relics;
 write_out('btn-bonfire.svg', button_svg('VISIT THE BONFIRE', 'ptravesso-dba.github.io', 300));
 write_out('btn-linkedin.svg', button_svg('LINKEDIN', 'in/pablo-travesso', 220));
 write_out('footer.svg', footer_svg());
+write_out('avatar.svg', template('avatar.src.svg'));
 update_readme();

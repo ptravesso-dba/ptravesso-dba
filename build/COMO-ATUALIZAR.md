@@ -64,3 +64,13 @@ git push
 ```
 
 O GitHub atualiza o perfil em um ou dois minutos. Se a imagem não mudar, é cache do GitHub: espere alguns minutos.
+
+## Avatar
+
+A foto do perfil é o emblema da fogueira. A fonte fica em `build/avatar.src.svg`; o build gera `assets/avatar.svg`, e o PNG de 1000×1000 sai com:
+
+```bash
+powershell -File build/render-avatar.ps1
+```
+
+O GitHub não aceita trocar o avatar por API: suba `assets/avatar.png` em github.com/settings/profile, em "Profile picture" → "Upload a photo".
